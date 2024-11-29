@@ -176,62 +176,136 @@ def generate_free_verse(lines):
     words = {
         'nouns': [
             "sky", "moon", "star", "river", "ocean", "mountain", "fire", "cloud", "wind", "sun", "tree", "leaf", 
-            "earth", "snow", "dream", "whisper", "thoughts", "chill", "shadows", "mystical", "flame", "awakening", 
-            "firefly", "dust", "wish", "leaves", "melancholy", "light", "pathway", "breeze", "forest", "depths", 
-            "heart", "whimsy", "echo", "life", "flower", "rain", "desire", "night", "storm", "sorrow", "tide", 
-            "horizon", "mystery", "reflection", "hope", "journey", "truth", "fate", "windstorm", "sunset", "dawn", 
-            "solitude", "thunder", "peace", "serenity", "tranquility", "whirlwind", "passion", "moment", "echoes", 
-            "silent", "cliff", "island", "storm", "shadow", "palm", "wilderness", "adventure", "riverbank", 
-            "mystery", "nostalgia", "depth", "tapestry", "tapestry", "silence", "melody", "reverie", "seashell", 
-            "petal", "stormcloud", "universe", "mirage", "storm", "twilight", "prayer", "void", "driftwood", 
-            "illusion", "momentum", "cascade", "mountain peak", "moonbeam", "enigma", "temple", "philosophy", 
-            "echoing", "vacuum", "grace", "whisper", "dreamscape", "solace", "tempest", "melancholy", "grief", 
-            "tears", "ravine", "stillness", "twilight", "paradise", "cosmos", "abyss", "wanderer", "timelessness",
-            "sunshine", "spiral", "cascade", "abyss", "solitude", "gale", "reflection", "anomaly", "mind", "vision",
-            "lightning", "shiver", "awakening", "openness", "dawn", "sanctuary"
+            "earth", "snow", "dream", "whisper", "thoughts", "chill", "shadows", "flame", "awakening", "firefly", 
+            "dust", "wish", "leaves", "melancholy", "light", "breeze", "forest", "depths", "heart", "whimsy", "echo", 
+            "flower", "rain", "desire", "night", "storm", "sorrow", "tide", "horizon", "reflection", "hope", "journey", 
+            "truth", "fate", "windstorm", "sunset", "dawn", "solitude", "thunder", "peace", "serenity", "whirlwind", 
+            "moment", "echoes", "silent", "cliff", "island", "stormcloud", "seashell", "petal", "riverbank", "solitude", 
+            "cosmos", "abyss", "island", "mystery", "wilderness", "adventure", "rainbow", "storm", "mist", "cliff", 
+            "sea", "twilight", "tapestry", "tide", "canyon", "haze", "flurry", "cascade", "cavern", "void", "nightfall", 
+            "echo", "reflection", "whisper", "sands", "mountain peak", "wisp", "twilight", "moonbeam", "oasis", 
+            "thunderstorm", "illusion", "sunshine", "driftwood", "reverie", "serenity", "horizon", "ember", 
+            "watershed", "palm", "boulder", "cobweb", "rift", "mountainside", "sunrise", "starlight", "dawn", 
+            "desolation", "prayer", "tides", "windswept", "dreamscape", "volcano", "abyss", "whispers", "grove", "song"
         ],
+        
         'verbs': [
+            # Base Form
             "glimmer", "whisper", "tremble", "reverberate", "stir", "grasp", "ignite", "soar", "whirl", "twirl", 
             "collapse", "explode", "tumble", "crash", "vibrate", "expand", "shimmer", "whine", "pulsate", "reflect", 
             "sing", "echo", "burn", "flame", "drift", "rise", "unfold", "unravel", "flow", "glisten", "blink", 
-            "recede", "jump", "pulse", "expand", "snap", "rip", "blaze", "shudder", "crumble", "rejoice", "expand", 
+            "recede", "jump", "pulse", "snap", "rip", "blaze", "shudder", "crumble", "rejoice", "expand", 
             "rush", "disappear", "swirl", "roar", "lurk", "wander", "crash", "weave", "tangle", "flutter", "rush", 
             "float", "glide", "glimmer", "drift", "whistle", "sweep", "perceive", "surge", "wade", "scintillate", 
             "tumble", "shiver", "blaze", "reflect", "scatter", "enlighten", "pierce", "evaporate", "shine", 
-            "wilt", "dance", "burn", "fall", "ascend", "sink", "crackle", "surround", "envelop", "gather", "unwind", 
+            "wilt", "dance", "fall", "ascend", "sink", "crackle", "surround", "envelop", "gather", "unwind", 
             "flare", "embrace", "press", "sink", "tangle", "encircle", "breathe", "magnify", "spread", "spark", 
-            "clash", "pierce", "chime", "fade", "explode", "flicker", "crackle", "dance", "leap", "stir", "sink", 
-            "swim", "twitch", "grip", "wind", "unravel", "destroy", "envelop", "scour", "plunge"
+            "clash", "pierce", "chime", "fade", "explode", "flicker", "leap", "stir", "swim", "twitch", 
+            "wind", "unravel", "destroy", "scour", "plunge", 
+            
+            # Present Tense (Adding Present Simple, Progressive)
+            "glimmers", "whispers", "trembles", "reverberates", "stirs", "grasps", "ignites", "soars", "whirls", 
+            "twirls", "collapses", "explodes", "tumbles", "crashes", "vibrates", "expands", "shimmers", "whines", 
+            "pulsates", "reflects", "sings", "echoes", "burns", "flames", "drifts", "rises", "unfolds", "unravels", 
+            "flows", "glistens", "blinks", "recedes", "jumps", "pulses", "snaps", "rips", "blazes", "shudders", 
+            "crumbles", "rejoices", "expands", "rushes", "disappears", "swirls", "roars", "lurks", "wanders", 
+            "crashes", "weaves", "tangles", "flutters", "rushes", "floats", "glides", "glimmers", "drifts", 
+            "whistles", "sweeps", "perceives", "surges", "wades", "scintillates", "tumbles", "shivers", "blazes", 
+            "reflects", "scatters", "enlightens", "pierces", "evaporates", "shines", "wilts", "dances", "falls", 
+            "ascends", "sinks", "crackles", "surrounds", "envelops", "gathers", "unwinds", "flares", "embraces", 
+            "presses", "sinks", "tangles", "encircles", "breathes", "magnifies", "spreads", "sparks", "clashes", 
+            "pierces", "chimes", "fades", "explodes", "flickers", "leaps", "stirs", "swims", "twitches", 
+            "winds", "unravels", "destroys", "scours", "plunges",
+            
+            # Past Tense
+            "glimmered", "whispered", "trembled", "reverberated", "stirred", "grasped", "ignited", "soared", 
+            "whirled", "twirled", "collapsed", "exploded", "tumbled", "crashed", "vibrated", "expanded", 
+            "shimmered", "whined", "pulsated", "reflected", "sang", "echoed", "burned", "flamed", "drifted", 
+            "rose", "unfolded", "unraveled", "flowed", "glistened", "blinked", "receded", "jumped", "pulsed", 
+            "snapped", "ripped", "blazed", "shuddered", "crumbled", "rejoiced", "expanded", "rushed", 
+            "disappeared", "swirled", "roared", "lurked", "wandered", "crashed", "weaved", "tangled", "fluttered", 
+            "rushed", "floated", "glided", "glimmered", "drifted", "whistled", "swept", "perceived", "surged", 
+            "waded", "scintillated", "tumbled", "shivered", "blazed", "reflected", "scattered", "enlightened", 
+            "pierced", "evaporated", "shined", "wilted", "danced", "fell", "ascended", "sank", "crackled", 
+            "surrounded", "enveloped", "gathered", "unwound", "flared", "embraced", "pressed", "sank", 
+            "tangled", "encircled", "breathed", "magnified", "spread", "sparked", "clashed", "pierced", "chimed", 
+            "faded", "exploded", "flickered", "leaped", "stirred", "swam", "twitched", "wound", "unraveled", 
+            "destroyed", "scoured", "plunged",
+            
+            # Future Tense
+            "will glimmer", "will whisper", "will tremble", "will reverberate", "will stir", "will grasp", 
+            "will ignite", "will soar", "will whirl", "will twirl", "will collapse", "will explode", "will tumble", 
+            "will crash", "will vibrate", "will expand", "will shimmer", "will whine", "will pulsate", "will reflect", 
+            "will sing", "will echo", "will burn", "will flame", "will drift", "will rise", "will unfold", 
+            "will unravel", "will flow", "will glisten", "will blink", "will recede", "will jump", "will pulse", 
+            "will snap", "will rip", "will blaze", "will shudder", "will crumble", "will rejoice", "will expand", 
+            "will rush", "will disappear", "will swirl", "will roar", "will lurk", "will wander", "will crash", 
+            "will weave", "will tangle", "will flutter", "will rush", "will float", "will glide", "will glimmer", 
+            "will drift", "will whistle", "will sweep", "will perceive", "will surge", "will wade", "will scintillate", 
+            "will tumble", "will shiver", "will blaze", "will reflect", "will scatter", "will enlighten", 
+            "will pierce", "will evaporate", "will shine", "will wilt", "will dance", "will fall", "will ascend", 
+            "will sink", "will crackle", "will surround", "will envelop", "will gather", "will unwind", "will flare", 
+            "will embrace", "will press", "will sink", "will tangle", "will encircle", "will breathe", "will magnify", 
+            "will spread", "will spark", "will clash", "will pierce", "will chime", "will fade", "will explode", 
+            "will flicker", "will leap", "will stir", "will swim", "will twitch", "will wind", "will unravel", 
+            "will destroy", "will scour", "will plunge",
+            
+            # Present Progressive
+            "is glimmering", "is whispering", "is trembling", "is reverberating", "is stirring", "is grasping", 
+            "is igniting", "is soaring", "is whirling", "is twirling", "is collapsing", "is exploding", "is tumbling", 
+            "is crashing", "is vibrating", "is expanding", "is shimmering", "is whining", "is pulsating", "is reflecting", 
+            "is singing", "is echoing", "is burning", "is flaming", "is drifting", "is rising", "is unfolding", 
+            "is unraveling", "is flowing", "is glistening", "is blinking", "is receding", "is jumping", "is pulsing", 
+            "is snapping", "is ripping", "is blazing", "is shuddering", "is crumbling", "is rejoicing", "is expanding", 
+            "is rushing", "is disappearing", "is swirling", "is roaring", "is lurking", "is wandering", "is crashing", 
+            "is weaving", "is tangling", "is fluttering", "is rushing", "is floating", "is gliding", "is glimmering", 
+            "is drifting", "is whistling", "is sweeping", "is perceiving", "is surging", "is wading", "is scintillating", 
+            "is tumbling", "is shivering", "is blazing", "is reflecting", "is scattering", "is enlightening", 
+            "is piercing", "is evaporating", "is shining", "is wilting", "is dancing", "is falling", "is ascending", 
+            "is sinking", "is crackling", "is surrounding", "is enveloping", "is gathering", "is unwinding", 
+            "is flaring", "is embracing", "is pressing", "is sinking", "is tangling", "is encircling", "is breathing", 
+            "is magnifying", "is spreading", "is sparking", "is clashing", "is piercing", "is chiming", "is fading", 
+            "is exploding", "is flickering", "is leaping", "is stirring", "is swimming", "is twitching", 
+            "is winding", "is unraveling", "is destroying", "is scouring", "is plunging"
         ],
+        
         'adjectives': [
             "smooth", "vibrant", "gentle", "delicate", "wild", "fragrant", "bright", "eternal", "glowing", "majestic", 
             "calm", "frosted", "unbroken", "shimmering", "turbulent", "serene", "luminous", "silent", "brilliant", 
-            "mystical", "crystal", "timeless", "invisible", "frozen", "vivid", "turbulent", "stirring", "blazing", 
-            "mournful", "fragile", "unseen", "radiant", "twinkling", "soft", "clear", "undisturbed", "introspective", 
+            "mystical", "crystal", "timeless", "invisible", "frozen", "vivid", "stirring", "blazing", "mournful", 
+            "fragile", "unseen", "radiant", "twinkling", "soft", "clear", "undisturbed", "introspective", 
             "soulful", "vibrating", "colorful", "desolate", "permanent", "elusive", "everlasting", "fragile", 
             "sensitive", "infinite", "cosmic", "subtle", "dark", "serene", "restless", "nocturnal", "expansive", 
-            "vivid", "elusive", "timeless", "clear", "unfurling", "eternal", "sparse", "vibrating", "glistening", 
-            "shadowed", "bright", "new", "invisible", "unheard", "frosty", "faint", "stark", "pale", "dreamy", 
-            "distant", "luminous", "pale", "ephemeral", "frantic", "frozen", "sacred", "ancient", "glimmering", 
-            "fragile", "turbulent", "volatile", "tempestuous", "calming", "passionate", "silken", "faint", 
-            "suspended", "harsh", "sharp", "unsung", "solitary", "soothing", "undisturbed", "fragile", 
-            "tender", "fierce", "mystic", "earthy", "indelible", "turbulent", "veiled", "dreamlike", "softened", 
-            "shadowed", "crimson", "delicate", "lustrous", "radiant", "unbroken", "tender", "boundless", "peaceful"
+            "vivid", "elusive", "timeless", "unfurling", "sparse", "vibrating", "glistening", "shadowed", 
+            "bright", "new", "invisible", "unheard", "frosty", "faint", "stark", "dreamy", "distant", "pale", 
+            "ephemeral", "frenetic", "frantic", "frozen", "sacred", "glimmering", "radiant", "unbroken", "tender", 
+            "boundless", "peaceful", "ancient", "lustrous", "dreamlike", "mystic", "suspended", "harsh", "sharp", 
+            "solitary", "soothing", "fragile", "tender", "fiery", "calming", "volcanic", "shimmering", "smooth", 
+            "clear", "quiet", "turbulent", "twinkling", "serene", "unspoken", "secretive", "whispering", 
+            "feathered", "earthy", "radiant"
         ],
+        
         'adverbs': [
-            "gracefully", "gently", "delicately", "vividly", "serenely", "brightly", "boldly", "naturally", "elegantly", 
-            "effortlessly", "subtly", "spiraling", "exuberantly", "tremulously", "boldly", "vibrantly", "freely", 
+            "gracefully", "gently", "delicately", "vividly", "serenely", "brightly", "boldly", "naturally", 
+            "elegantly", "effortlessly", "subtly", "spiraling", "exuberantly", "tremulously", "vibrantly", "freely", 
             "elegantly", "steadily", "unseen", "smoothly", "suddenly", "whisperingly", "lazily", "sharply", "serenely", 
-            "drifting", "reflectively", "exultantly", "faintly", "effortlessly", "mysteriously", "gently", "suddenly", 
-            "aimlessly", "repeatedly", "whimsically", "tenderly", "transcendently", "ethereally", "wildly", 
-            "mournfully", "reverently", "innocently", "clearly", "sharply", "mournfully", "timelessly", 
-            "languidly", "fervently", "gently", "agilely", "restlessly", "imperceptibly", "briefly", 
-            "undisturbed", "silently", "softly", "unsteadily", "elusively", "eagerly", "still", "distantly", 
-            "gracefully", "nervously", "carefully", "gently", "wildly", "glowingly", "lively", "sweetly", 
-            "unusually", "precisely", "unobtrusively", "subconsciously", "flowingly", "softly", "timidly", 
-            "glowingly", "barely", "swiftly", "uneasily", "impatiently", "melodiously", "frantically", 
-            "ominously", "impressively", "serenely", "indifferently", "dreamily", "giddily", "indistinctly", 
-            "mournfully", "resolutely", "gracefully", "gracefully", "barely", "impatiently", "glowingly"
+            "drifting", "reflectively", "exultantly", "faintly", "effortlessly", "mysteriously", "gently", 
+            "suddenly", "aimlessly", "repeatedly", "whimsically", "tenderly", "transcendently", "ethereally", 
+            "wildly", "mournfully", "reverently", "innocently", "clearly", "sharply", "timelessly", "languidly", 
+            "imperceptibly", "restlessly", "gracefully", "precisely", "unobtrusively", "subconsciously", 
+            "flowingly", "softly", "timidly", "glowingly", "barely", "swiftly", "uneasily", "impatiently", 
+            "melodiously", "frantically", "ominously", "impressively", "indistinctly", "dreamily", "giddily", 
+            "indifferently", "serenely", "distantly", "gracefully", "barely", "impatiently"
+        ],
+
+        'connectors': [
+            "and", "but", "yet", "for", "nor", "so", "because", "though", "while", "since", "although", 
+            "whereas", "despite", "except", "however", "therefore", "as", "until", "when", "if", "whether", 
+            "in", "out", "without", "on", "off", "along", "through", "between", "around", "by", "above", "below", 
+            "under", "over", "beneath", "beside", "besides", "across", "within", "beyond", "after", "before", 
+            "upon", "next", "toward", "towards", "within", "without", "in case", "as though", "since", "as soon as", 
+            "meanwhile", "even", "so that", "just as", "because of", "even if", "in spite of", "as long as", 
+            "likewise", "in the meantime", "given that", "for instance", "similarly", "unless", "thus", "consequently"
         ]
     }
 
@@ -243,10 +317,11 @@ def generate_free_verse(lines):
         adj1 = random.choice([word for word in words['adjectives'] if word not in used_words])
         adv1 = random.choice([word for word in words['adverbs'] if word not in used_words])
         noun2 = random.choice([word for word in words['nouns'] if word not in used_words])
+        connector = random.choice(words['connectors'])
 
-        used_words.update([noun1, verb1, adj1, adv1, noun2])
+        used_words.update([noun1, verb1, adj1, adv1, noun2, connector])
 
-        return f"{noun1} {verb1} {adv1} the {adj1} {noun2}"
+        return f"{noun1} {verb1} {adv1} {connector} {adj1} {noun2}"
 
     poem = []
     for _ in range(lines):

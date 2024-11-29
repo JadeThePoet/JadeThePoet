@@ -350,7 +350,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-top: 150px;  /* Adjust this value to move it further down */
+    margin-top: 200px;  /* Adjust this value to move it further down */
 }
 .footer-content {
     position: absolute;
@@ -362,13 +362,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 1%;
     margin-left: 0%;
-    margin-bottom:  190%;
+    margin-bottom:  150%;
     background-color: rgb(0, 168, 107); /* Dark background */
-    padding: 30px 68%;
+    padding: 30px 20%;
     border-radius: 10px; /* Optional: rounded corners */
     transition: background-color 0.3s ease; /* Smooth transition for background change */
+    
+    
+
     }   
 
 }
@@ -386,7 +389,29 @@
     font-size: 20px;  /* Adjust the font size as per your needs */
     color: #ffffff; 
         }
-        
+        /* Styling for social icons */
+.social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effects for icons */
+.social-icons a:hover {
+    transform: scale(1.1);  /* Slight zoom effect */
+    filter: brightness(1.2);  /* Increase brightness */
+}
+
+/* Specific hover effects for GitHub icon */
+.social-icons .fab.fa-github:hover {
+    color: #333; /* Change the color on hover */
+}
+
+/* Specific hover effects for image-based icons */
+.social-icons img:hover {
+    opacity: 0.8; /* Reduce opacity for a fade effect */
+    transform: scale(1.1); /* Slight zoom effect */
+}
             </style>
         
         </head>
@@ -421,20 +446,19 @@
                 <!-- Content above the image background -->
                 <div class="footer-content">
                     <div class="social-icons">
-                        <!-- GitHub Icon -->
-                        <a href="https://github.com/JadeThePoet/JadeThePoet" target="_blank">
-                            <i class="fab fa-github" style="font-size: 45px; color: white;"></i>
+                        <!-- GitHub Icon (Font Awesome) -->
+                        <a href="https://github.com/JadeThePoet/JadeThePoet" target="_blank" class="social-icon">
+                            <i class="fab fa-github" style="font-size: 45px;"></i>
                         </a>
-                        <!-- X (Twitter) Icon -->
-                        <a href="https://x.com/jadepoetries" target="_blank">
-                            <i class="fab fa-x" style="font-size: 45px; color: #ffffff;"></i>
+                        <!-- X (Twitter) Icon (Custom Image) -->
+                        <a href="https://x.com/jadepoetries" target="_blank" class="social-icon">
+                            <img src="{{ url_for('static', filename='twitter_icon.png') }}" alt="Twitter" width="45" height="45" />
                         </a>
                         <a href="#" class="pumpfun-icon">
-                            <img src="{{ url_for('static', filename='pumpfun_icon.png') }}" alt="PumpFun" width="55" height="48" />
+                            <img src="{{ url_for('static', filename='pumpfun_icon.png') }}" alt="PumpFun" width="45" height="43" class="social-icon" />
                         </a>
                     </div>
-                    
-                </div> 
+                </div>
             </footer>
             
             
@@ -552,7 +576,7 @@
             </div>
             <div class="suggestion">
                 <h5>Suggested Topics</h5>
-                <p>Get inspired with new topics to write about.</p>
+                <p>We are willing to improve everything for our community. Send your suggestion(s) via X.</p>
             </div>
             <div class="live-feed">
                 <h3>Live Feed</h3>
