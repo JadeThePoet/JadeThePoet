@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request, jsonify
 
-app = Flask(__name__, template_folder=os.path.join('src', 'webs', 'templates'))
+app = Flask(__name__, template_folder=os.path.join(os.getcwd(), 'src', 'web', 'templates'))
 
 @app.route('/')
 def index():
