@@ -1,6 +1,13 @@
         <!DOCTYPE html>
         <html lang="en">
         <head>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Latest Updates</title>
+                <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS -->
+            </head>
+            
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
             </head>
@@ -11,7 +18,52 @@
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            <link rel="stylesheet" href="styles.css">
+            <script src="js/script.js"></script>
+            </body>
             <style>
+
+                /* General list styling */
+                    .suggestion ul {
+                        list-style: none; /* Removes default bullet points */
+                        padding: 0;        /* Removes default padding */
+                        margin: 0;         /* Ensures no margin around the list */
+                    }
+
+                    /* Styling for each list item */
+                    .suggestion ul li {
+                        margin-bottom: 15px; /* Adds space between list items */
+                    }
+
+                    /* Styling for anchor links */
+                    .suggestion ul li a {
+                        display: block; /* Makes the entire link area clickable */
+                        text-decoration: none; /* Removes the default underline */
+                        color: #333; /* Default text color (dark gray) */
+                        font-size: 16px; /* Sets the font size */
+                        font-weight: bold; /* Makes the text bold */
+                        transition: color 0.3s ease; /* Adds a smooth color transition effect */
+                    }
+
+                    /* Hover effect for links */
+                    .suggestion ul li a:hover {
+                        color: #1299f3; /* Changes the text color on hover (orange) */
+                    }   
+
+                    /* Styling for the image container */
+                    #image-display {
+                        text-align: center; /* Centers the image inside the container */
+                        margin-top: 20px; /* Adds spacing between the text and the image */
+                    }
+
+                    /* Styling for the image inside the image container */
+                    #image-display img {
+                        max-width: 100%; /* Makes sure the image doesn't exceed the container width */
+                        height: auto; /* Maintains the image aspect ratio */
+                        border-radius: 8px; /* Optionally adds rounded corners to the image */
+                        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow effect for the image */
+                    }
+
                 :root {
                     --jade-primary: #00a86b;
                     --jade-secondary: #008080;
@@ -288,38 +340,69 @@
                     font-size: 1.1em;
                 }
                 footer {
-            background-color: #15202b;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
+    background-image: url('{{ url_for('static', filename='square_image.png') }}');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 150px;  /* Adjust this value to move it further down */
+}
+.footer-content {
+    position: absolute;
+    z-index: 1; /* Keeps the content above the background */
+    padding-bottom: 20px; /* Adjust this to provide spacing from the bottom */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-left: 0%;
+    margin-bottom:  190%;
+    background-color: rgb(0, 168, 107); /* Dark background */
+    padding: 30px 68%;
+    border-radius: 10px; /* Optional: rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for background change */
+    }   
+
+}
+
+
         .social-icons a {
-            text-decoration: none;
-            transition: transform 0.3s ease;
+            color: white;
+    font-size: 40px;
+    transition: color 0.3s ease;
         }
         .social-icons a:hover {
-            transform: scale(1.1);
+            color: #00aaff; /* Change color on hover */
+        }
+        .sidebar-footer a {
+    font-size: 20px;  /* Adjust the font size as per your needs */
+    color: #ffffff; 
         }
         
             </style>
+        
         </head>
+        
         <body>
 
         <!-- Left Sidebar -->
         <div class="sidebar">
             <div class="sidebar-header">
-                <img src="{{ url_for('static', filename='jade_avatar.png') }}" alt="Jade The Poet">
+                <img src="{{ url_for('static', filename='jade_avatar.png') }}" alt="Jade The Poet" />
                 <h1>Jade The Poet</h1>
             </div>
             <div class="sidebar-stats">
-                <p><strong>Followers:</strong> 3.9 Million Followers </p>
+                <p><strong>Followers:</strong> 10 Followers </p>
                 <p><strong>Following:</strong> 10 Following </p>
-                <p><strong>Posts:</strong> 174 Total Posts</p>
+                <p><strong>Posts:</strong> 10 Total Posts</p>
             </div>
             <div class="sidebar-nav">
                 <a href="#"><i class="fas fa-home"></i> Home</a>
@@ -329,24 +412,32 @@
                 <a href="#"><i class="fas fa-bell"></i> Notifications</a>
                 <a href="#"><i class="fas fa-cog"></i> Settings</a>
             </div>
+            
             <div class="sidebar-footer">
-                <a href="#">About</a> | <a href="#">Privacy</a> | <a href="#">Contact</a>
+                <a href="#"></a> <a href="#">OFFICIAL LINKS</a> <a href="#"> </a>
+            
             </div>
             <footer>
-                <div class="social-icons">
-                    <!-- GitHub Icon -->
-                    <a href="https:github.com/JadeThePoet/JadeThePoet" target="_blank">
-                        <i class="fab fa-github" style="font-size: 30px; color: white;"></i>
-                    </a>
-        
-                    <!-- X (Twitter) Icon -->
-                    <a href="https://x.com/jadepoetries" target="_blank">
-                        <i class="fab fa-x" style="font-size: 30px; color: #ffffff;"></i>
-                        
-                    </a>
-                </div>
-                <p>&copy; Jade The Poet</p>
+                <!-- Content above the image background -->
+                <div class="footer-content">
+                    <div class="social-icons">
+                        <!-- GitHub Icon -->
+                        <a href="https://github.com/JadeThePoet/JadeThePoet" target="_blank">
+                            <i class="fab fa-github" style="font-size: 45px; color: white;"></i>
+                        </a>
+                        <!-- X (Twitter) Icon -->
+                        <a href="https://x.com/jadepoetries" target="_blank">
+                            <i class="fab fa-x" style="font-size: 45px; color: #ffffff;"></i>
+                        </a>
+                        <a href="#" class="pumpfun-icon">
+                            <img src="{{ url_for('static', filename='pumpfun_icon.png') }}" alt="PumpFun" width="55" height="48" />
+                        </a>
+                    </div>
+                    
+                </div> 
             </footer>
+            
+            
         </div>
 
         <!-- Main Content Area -->
@@ -409,10 +500,48 @@
             </div>
 
             <!-- Create Post Form -->
-            <div class="create-post-form">
-                <textarea placeholder="Write your poetry here..." rows="6"></textarea>
-                <button class="btn btn-primary">Post</button>
-            </div>
+<div class="create-post-form">
+    <textarea placeholder="Write your poem here... We're excited to hear your thoughts." rows="6" id="poem-text"></textarea>
+    <button class="btn btn-primary" id="post-button">Share</button>
+</div>
+
+<!-- Floating Thank You Message with Chatbox style -->
+<div id="thank-you-message" style="display: none; color: white; font-weight: bold; 
+     background: #28a745; padding: 10px 15px; border-radius: 25px; 
+     text-align: center; font-size: 18px; position: fixed; 
+     bottom: 15%; right: 5%; transform: translateX(0%);
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); z-index: 1000;
+     max-width: 250px;">
+
+    <!-- Message with a chatbox tail -->
+    <div style="position: relative; display: inline-block;">
+        <div id="chat-tail" style="position: absolute; bottom: -10px; right: 10px; width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #28a745;"></div>
+        Thank you so much for sharing your beautiful poem with us. How lovely!
+    </div>
+</div>
+
+<script>
+    // Get the button and message elements
+    const postButton = document.getElementById('post-button');
+    const thankYouMessage = document.getElementById('thank-you-message');
+
+    // Add event listener for button click
+    postButton.addEventListener('click', function() {
+        // Display a prompt (optional)
+        alert("Thank you for sharing your Poem with us, how lovely!");
+
+        // Show the thank you message on the page
+        thankYouMessage.style.display = 'block';
+
+        // Hide the message after 5 seconds (5000 milliseconds)
+        setTimeout(function() {
+            thankYouMessage.style.display = 'none';
+        }, 5000); // Hides the message after 5 seconds
+    });
+</script>
+
+
+
         </div>
 
         <!-- Right Sidebar -->
@@ -435,6 +564,47 @@
                     <h5>Poet: William Shakespeare</h5>
                     <p>"A world so vast, but still so near..."</p>
                 </div>
+                <div class="right-bar">
+   
+    
+    <!-- Featured Poem of the Week -->
+    <div class="suggestion">
+        <h5>Featured Poem of the Week</h5>
+        <p>"A journey through the clouds, where dreams are born, And every star tells a story untold."</p>
+    </div>
+    
+    <!-- Poet of the Week -->
+    <div class="suggestion">
+        <h5>Poet of the Week</h5>
+        <p><strong>Emily Rose</strong> - A rising star in the poetry world known for her vivid imagery and heartfelt verses.</p>
+    </div>
+    
+    <div class="suggestion">
+        <h5>Latest Updates</h5>
+        <ul>
+            <li><a href="#" class="update-link" data-image="haiku_challenge_image.jpg">New poetry challenge: Haiku contest (Coming soon...)</a></li>
+            <li><a href="#" class="update-link" data-image="poetry_slam_image.jpg">Upcoming event: Virtual poetry slam (Coming soon...)</a></li>
+            <li><a href="#" class="update-link" data-image="workshop_image.jpg">Join our poetry workshop: Free registration (Coming soon...)</a></li>
+        </ul>
+        <div id="image-display">
+            <!-- Image will be displayed here -->
+            <img id="displayed-image" src="" alt="Update Image" style="display: none; max-width: 100%; margin-top: 20px;" />
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+    <div class="right-bar-footer">
+        <p style="text-align: center; color: #8899a6; font-size: 0.9em;">
+            &copy; 2024 Jade The Poet. All Rights Reserved.
+        </p>
+    </div>
+    
+</div>
+    </div>
             </div>
         </div>
 
